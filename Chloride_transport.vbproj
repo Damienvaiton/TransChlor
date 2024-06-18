@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
-  <Import Project="packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
-  <Import Project="packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" />
-  <Import Project="packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" />
-  <Import Project="packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" />
-  <Import Project="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>7.10.3077</ProductVersion>
@@ -12,9 +12,9 @@
     <ProjectGuid>{4F6977EE-05FA-4966-8EA7-0F4E4A5867BA}</ProjectGuid>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>logoDC.ico</ApplicationIcon>
+    <ApplicationIcon>LogoTrans.ico</ApplicationIcon>
     <AssemblyKeyContainerName />
-    <AssemblyName>Chloride_transport</AssemblyName>
+    <AssemblyName>TransChlorAlpha</AssemblyName>
     <AssemblyOriginatorKeyFile />
     <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
     <DefaultClientScript>JScript</DefaultClientScript>
@@ -22,15 +22,15 @@
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
     <OutputType>WinExe</OutputType>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
     <OptionExplicit>On</OptionExplicit>
     <OptionStrict>Off</OptionStrict>
-    <RootNamespace>Chloride_transport</RootNamespace>
-    <StartupObject>Chloride_transport.declarations</StartupObject>
+    <RootNamespace>TransChlor</RootNamespace>
+    <StartupObject>TransChlor.My.MyApplication</StartupObject>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <MyType>WindowsFormsWithCustomSubMain</MyType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>0.0</OldToolsVersion>
@@ -38,19 +38,24 @@
     <TargetFrameworkProfile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>\\GCI-DACON-01\TransChlor\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <TargetCulture>en</TargetCulture>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <ProductName>TransChlor</ProductName>
+    <PublisherName>TransChlor</PublisherName>
+    <SuiteName>ULaval</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>TransChlor.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>15</ApplicationRevision>
+    <ApplicationVersion>2.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -59,25 +64,27 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>Chloride_transport.xml</DocumentationFile>
+    <DocumentationFile>TransChlorAlpha.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile />
     <DefineConstants />
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <DebugSymbols>true</DebugSymbols>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningLevel>1</WarningLevel>
-    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
     <DebugType>full</DebugType>
     <Prefer32Bit>false</Prefer32Bit>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>Chloride_transport.xml</DocumentationFile>
+    <DocumentationFile>TransChlorAlpha.xml</DocumentationFile>
     <BaseAddress>285212672</BaseAddress>
     <ConfigurationOverrideFile />
     <DefineConstants />
@@ -89,21 +96,24 @@
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <WarningLevel>1</WarningLevel>
-    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
     <DebugType>none</DebugType>
     <Prefer32Bit>false</Prefer32Bit>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>E402DE55B284E5BCB7FDC8C3E8A32D32BC532D3E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Chloride_transport_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
@@ -111,19 +121,79 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>TransChlorAlpha.xml</DocumentationFile>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <DocumentationFile>TransChlorAlpha.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Transchlor|AnyCPU'">
+    <OutputPath>bin\Transchlor\</OutputPath>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Transchlor|x64'">
+    <OutputPath>bin\x64\Transchlor\</OutputPath>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=4.15.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MathNet.Numerics.4.15.0\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <Name>System</Name>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data">
       <Name>System.Data</Name>
     </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing">
       <Name>System.Drawing</Name>
     </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms">
       <Name>System.Windows.Forms</Name>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml">
       <Name>System.XML</Name>
     </Reference>
@@ -138,31 +208,69 @@
     <Import Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CGraph.vb">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Compute.vb">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="declarations.vb">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="frmAxe.vb">
+    <Compile Include="CIETransNew.vb" />
+    <Compile Include="CETrans.vb" />
+    <Compile Include="CIETrans_MI.vb" />
+    <Compile Include="Compute2D.vb" />
+    <Compile Include="Compute2Dtrial.vb" />
+    <Compile Include="DBConnexion.vb" />
+    <Compile Include="Exposition.vb" />
+    <Compile Include="frmInput2D.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChlor.vb">
+    <Compile Include="FrmMeteoDatabase.Designer.vb">
+      <DependentUpon>FrmMeteoDatabase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMeteoDatabase.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOption1.vb">
+    <Compile Include="Old\btGauss.vb" />
+    <Compile Include="Old\CGraph.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorMap.vb" />
+    <Compile Include="Compute1D.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DiffusionXC.vb" />
+    <Compile Include="Old\CST.vb" />
+    <Compile Include="Old\dlgResults.Designer.vb">
+      <DependentUpon>dlgResults.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Old\dlgResults.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Old\Element.vb" />
+    <Compile Include="ElementTrans.vb" />
+    <Compile Include="frmGraph1DAxe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrans2D.Designer.vb">
+      <DependentUpon>frmTrans2D.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrans2D.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGraph1D.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInput1D.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhreeqC.Designer.vb">
+      <DependentUpon>frmPhreeqC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPhreeqC.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmProb.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmScale1.vb">
+    <Compile Include="frmGraph1DScale.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSplash.vb">
@@ -171,9 +279,15 @@
     <Compile Include="Functions.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Graph1.vb">
+    <Compile Include="Functions2D.vb" />
+    <Compile Include="Graph1D.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="HETrans.vb" />
+    <Compile Include="OutputFile2D.vb" />
+    <Compile Include="Table_PHYS_EXPO.vb" />
+    <Compile Include="TETrans.vb" />
+    <Compile Include="TransportXC.vb" />
     <Compile Include="MDIChlor.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +296,11 @@
     </Compile>
     <Compile Include="modDialog.vb">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -193,23 +312,45 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="TempSeuil.vb">
+    <Compile Include="Old\Node.vb" />
+    <Compile Include="NodeTrans.vb" />
+    <Compile Include="Old\PointLoad.vb" />
+    <Compile Include="Range.vb" />
+    <Compile Include="CIETrans.vb" />
+    <Compile Include="SETrans.vb" />
+    <Compile Include="Old\Support.vb" />
+    <Compile Include="frmMeteo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="frmAxe.resx">
-      <DependentUpon>frmAxe.vb</DependentUpon>
+    <EmbeddedResource Include="frmInput2D.resx">
+      <DependentUpon>frmInput2D.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmChlor.resx">
-      <DependentUpon>frmChlor.vb</DependentUpon>
+    <EmbeddedResource Include="FrmMeteoDatabase.resx">
+      <DependentUpon>FrmMeteoDatabase.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOption1.resx">
-      <DependentUpon>frmOption1.vb</DependentUpon>
+    <EmbeddedResource Include="Old\dlgResults.resx">
+      <DependentUpon>dlgResults.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGraph1DAxe.resx">
+      <DependentUpon>frmGraph1DAxe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrans2D.resx">
+      <DependentUpon>frmTrans2D.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGraph1D.resx">
+      <DependentUpon>frmGraph1D.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInput1D.resx">
+      <DependentUpon>frmInput1D.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhreeqC.resx">
+      <DependentUpon>frmPhreeqC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProb.resx">
       <DependentUpon>frmProb.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmScale1.resx">
-      <DependentUpon>frmScale1.vb</DependentUpon>
+    <EmbeddedResource Include="frmGraph1DScale.resx">
+      <DependentUpon>frmGraph1DScale.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.vb</DependentUpon>
@@ -223,18 +364,30 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TempSeuil.resx">
-      <DependentUpon>TempSeuil.vb</DependentUpon>
+    <EmbeddedResource Include="frmMeteo.resx">
+      <DependentUpon>frmMeteo.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
+      <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TransChlorMat.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TransChlorMat_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>TransChlorMat.mdf</DependentUpon>
+    </Content>
     <None Include="app.config" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Settings.settings">
@@ -242,67 +395,153 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Resources\Docs\ModeEmploi_v4.pdf">
+    <Content Include="LogoTrans.ico" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Resources\Docs\LogoTrans.ico" />
+    <Content Include="Resources\Docs\ModeEmploi_v4.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Docs\ModeEmploi_v4.ppt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Exposition\EXPO_1_TEHERI.txt" />
+    <Content Include="Resources\Exposition\EXPO_2_TEHERI.txt" />
+    <Content Include="Resources\Exposition\EXPO_Drying100Days_75RH_DC.txt" />
+    <Content Include="Resources\Exposition\EXPO_Drying300Days_50RH_DC.txt" />
+    <Content Include="Resources\Exposition\EXPO_Drying450Days_25RH_DC.txt" />
+    <Content Include="Resources\Exposition\EXPO_Ref_Capillary_Cyclic1.txt" />
+    <Content Include="Resources\Exposition\EXPO_Ref_Capillary_Cyclic2.txt" />
+    <Content Include="Resources\Exposition\EXPO_Ref_Capillary_Cyclic3.txt" />
+    <Content Include="Resources\Exposition\EXPO_Ref_Capillary_Resine.txt" />
+    <Content Include="Resources\Exposition\EXPO_SECHAGE25RH_CONSTANT_500H.txt" />
+    <Content Include="Resources\Exposition\EXPO_SECHAGE50RH_CONSTANT_500H.txt" />
+    <Content Include="Resources\Exposition\EXPO_SECHAGE75RH_CONSTANT_500H.txt" />
+    <Content Include="Resources\Exposition\EXPO_Wetting3Days_LK.txt" />
+    <Content Include="Resources\Exposition\EXPO_Wetting7Days_DC.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_CyclicLi.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_A25RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_A50RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_A75RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_B25RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_B50RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_B75RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_C25RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_C50RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingDC_C75RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingLK_A75RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingLK_B75RH.txt" />
+    <Content Include="Resources\Input\INPUT2D_DEFAULT_WettingLK_C75RH.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_Cyclic1.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_Cyclic2.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_Cyclic3.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_Explication.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_RadiationalDrying25RH.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_RadiationalDrying50RH.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_RadiationalDrying75RH.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_UniWettingDC.txt" />
+    <Content Include="Resources\MeshFiles\TABLE_DEFAULT_UniWettingLK.txt" />
+    <Content Include="Resources\PhreeqC\Database\phreeqc.dat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Exposition\EXPO_A_B_E_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_A_B_O_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_A_CAC_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_A_D_E_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_A_D_O_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_A_EXT_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_A_E_E_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_A_E_O_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_M_B_E_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_M_B_O_DAVOS.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Exposition\EXPO_M_CAC_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_M_CAI_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_M_D_E_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_M_D_O_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_M_EXT_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_M_E_E_DAVOS.txt" />
+    <Content Include="Resources\Exposition\EXPO_M_E_O_DAVOS.txt" />
+    <None Include="Resources\MeshFiles\test1ele.msh" />
+    <None Include="Resources\MeshFiles\test200ele.msh" />
+    <None Include="Resources\MeshFiles\test2ele.msh" />
+    <None Include="Resources\MeshFiles\test32ele.msh" />
+    <None Include="Resources\MeshFiles\test3eleL.msh" />
+    <None Include="Resources\MeshFiles\test480ele.msh" />
+    <None Include="Resources\MeshFiles\test4ele.msh" />
+    <None Include="Resources\MeshFiles\test50ele.msh" />
+    <None Include="Resources\MeshFiles\test800ele.msh" />
+    <None Include="Resources\MeshFiles\test8ele.msh" />
+    <None Include="Resources\MeshFiles\test_100ele_LUNK_BO.msh" />
+    <None Include="Resources\MeshFiles\test_1800ele_Teheri_Thermo.msh" />
+    <None Include="Resources\MeshFiles\test_2000ele_DC_C_new.msh" />
+    <None Include="Resources\MeshFiles\test_36ele_LUNK_BO.msh" />
+    <None Include="Resources\MeshFiles\test_375ele_DC_AandB.msh" />
+    <None Include="Resources\MeshFiles\test_500ele_DC_C.msh" />
+    <None Include="Resources\MeshFiles\test_500ele_DC_C_new.msh" />
+    <None Include="Resources\MeshFiles\test_60ele_DC_AB_new.msh" />
+    <None Include="Resources\MeshFiles\test_80ele_DC_C_new.msh" />
+    <None Include="Resources\MeshFiles\test_900ele_LUNK_BO.msh" />
+    <None Include="Resources\PhreeqC\IPhreeqcCOM-3.7.3-15968-x64.msi" />
+    <None Include="Resources\PhreeqC\NaClReaction.phr">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\Docs\ModeEmploi_v4.ppt">
+    <Content Include="Resources\Input\INPUT2D_Test.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
+    <Content Include="Resources\Input\INPUT2D_Explication.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_Explication.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_MONTREAL.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="logoDC.ico" />
-    <None Include="Resources\MeteoFiles\METEO_ZUERICHKLOTEN.TXT">
+    <Content Include="Resources\MeteoFiles\METEO_ZUERICHKLOTEN.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\MeteoFiles\METEO_SION.TXT">
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_SION.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\MeteoFiles\METEO_PULLY.TXT">
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_PULLY.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\MeteoFiles\METEO_LUGANO.TXT">
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_LUGANO.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\MeteoFiles\METEO_LOCARNOMONTI.TXT">
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_LOCARNOMONTI.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\MeteoFiles\METEO_GUETSCH.TXT">
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_GUETSCH.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\MeteoFiles\METEO_GDSTBERNARD.TXT">
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_GDSTBERNARD.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\MeteoFiles\METEO_DENEVE.TXT">
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_DENEVE.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\MeteoFiles\METEO_DAVOS.TXT">
+    </Content>
+    <Content Include="Resources\MeteoFiles\METEO_DAVOS.TXT">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\InitialCondition\CIT_lunk.txt">
+    </Content>
+    <Content Include="Resources\InitialCondition\CIT_lunk.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\InitialCondition\CII_lunk.txt">
+    </Content>
+    <Content Include="Resources\InitialCondition\CII_lunk.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\InitialCondition\CIH_lunk.txt">
+    </Content>
+    <Content Include="Resources\InitialCondition\CIH_lunk.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Docs\INPUT_Explication.txt">
+    </Content>
+    <Content Include="Resources\Input\INPUT_Explication.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Docs\Logo.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
-    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\vb\Humanizer.dll" />
-    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\vb\Microsoft.CodeQuality.Analyzers.dll" />
-    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\vb\Microsoft.CodeQuality.VisualBasic.Analyzers.dll" />
-    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\vb\Microsoft.NetCore.Analyzers.dll" />
-    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\vb\Microsoft.NetCore.VisualBasic.Analyzers.dll" />
-    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\vb\Microsoft.NetFramework.Analyzers.dll" />
-    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\vb\Microsoft.NetFramework.VisualBasic.Analyzers.dll" />
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Chloride_transport.xml">
@@ -315,6 +554,40 @@
       <IncludeHash>False</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+    <PublishFile Include="logoDC.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\vb\Humanizer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.CodeQuality.VisualBasic.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.NetCore.VisualBasic.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.3.0.0\analyzers\dotnet\vb\Microsoft.NetFramework.VisualBasic.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IPhreeqcCOM">
+      <Guid>{EDB4905E-CA79-4C56-BE59-575C71219AEA}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
@@ -325,10 +598,10 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
-    <Error Condition="!Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props'))" />
-    <Error Condition="!Exists('packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props'))" />
-    <Error Condition="!Exists('packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props'))" />
-    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.3.0.0\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeQuality.Analyzers.3.0.0\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetCore.Analyzers.3.0.0\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetFramework.Analyzers.3.0.0\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.FxCopAnalyzers.3.0.0\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
   </Target>
 </Project>

@@ -1,5 +1,4 @@
-Public Class frmSplash
-    Inherits System.Windows.Forms.Form
+Public Class frmSplash : Inherits System.Windows.Forms.Form
 
 #Region " Windows Form Designer generated code "
 
@@ -153,7 +152,7 @@ Public Class frmSplash
         Me.lblCopyright.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.lblCopyright.Size = New System.Drawing.Size(120, 17)
         Me.lblCopyright.TabIndex = 3
-        Me.lblCopyright.Text = "Copyright  1998-2000"
+        Me.lblCopyright.Text = "Copyright  1998-2020"
         '
         'lblCompany
         '
@@ -164,9 +163,9 @@ Public Class frmSplash
         Me.lblCompany.Location = New System.Drawing.Point(360, 224)
         Me.lblCompany.Name = "lblCompany"
         Me.lblCompany.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblCompany.Size = New System.Drawing.Size(96, 17)
+        Me.lblCompany.Size = New System.Drawing.Size(222, 17)
         Me.lblCompany.TabIndex = 2
-        Me.lblCompany.Text = "University  EPFL  "
+        Me.lblCompany.Text = "Laval University && EPFL"
         '
         'lblWarning
         '
@@ -207,9 +206,9 @@ Public Class frmSplash
         Me.lblPlatform.Location = New System.Drawing.Point(352, 80)
         Me.lblPlatform.Name = "lblPlatform"
         Me.lblPlatform.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblPlatform.Size = New System.Drawing.Size(212, 24)
+        Me.lblPlatform.Size = New System.Drawing.Size(230, 24)
         Me.lblPlatform.TabIndex = 5
-        Me.lblPlatform.Text = "Visual Basic .net 7.0"
+        Me.lblPlatform.Text = "Visual Basic .net 2019"
         Me.lblPlatform.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'lblProductName
@@ -222,9 +221,9 @@ Public Class frmSplash
         Me.lblProductName.Location = New System.Drawing.Point(304, 16)
         Me.lblProductName.Name = "lblProductName"
         Me.lblProductName.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.lblProductName.Size = New System.Drawing.Size(184, 51)
+        Me.lblProductName.Size = New System.Drawing.Size(379, 51)
         Me.lblProductName.TabIndex = 6
-        Me.lblProductName.Text = "Product"
+        Me.lblProductName.Text = "TransChlor Alpha"
         '
         'Label6
         '
@@ -237,7 +236,7 @@ Public Class frmSplash
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 8000
+        Me.Timer1.Interval = 5000
         '
         'frmSplash
         '
@@ -265,28 +264,26 @@ Public Class frmSplash
 
     'Lors de l'ouverture de la fenêtre
     Public Sub frmSplash_Load(ByVal eventSender As System.Object, ByVal eventArgs As System.EventArgs) Handles MyBase.Load
+
         lblVersion.Text = "Version " & System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly.Location).FileMajorPart & "." & System.Diagnostics.FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly.Location).FileMinorPart & "." '& App.Revision
-        lblProductName.Text = "CIP-Model"
+        lblProductName.Text = "TransChlor Alpha"
+
     End Sub
 
     'Lorsqu'une touche est frappée
     Public Sub frmSplash_KeyPress(ByVal eventSender As System.Object, ByVal eventArgs As System.Windows.Forms.KeyPressEventArgs) Handles MyBase.KeyPress
-        Me.Run()
+        Close()
     End Sub
 
     'Lorsqu'un clik est effectué sur la fenêtre
-    Private Sub PictureBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox1.Click, Frame1.Click, Timer1.Tick
-        Me.Run()
-    End Sub
+    'Private Sub PictureBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles PictureBox1.Click, Frame1.Click, Timer1.Tick
+    '    Close()
+    'End Sub
 
     'Gestion de la fenêtre
     Private Sub Run()
         Timer1.Enabled = False
-        Me.Visible = False
         Me.Close()
     End Sub
 
-    Private Sub lblVersion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblVersion.Click
-
-    End Sub
 End Class

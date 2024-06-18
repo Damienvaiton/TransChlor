@@ -83,6 +83,7 @@ Module modDialog
         Loop
         iPos = iPos_old - 1
         PostFile = Microsoft.VisualBasic.Left(outfile, iPos)
+        ChDir(PostFile)
 
     End Sub
 

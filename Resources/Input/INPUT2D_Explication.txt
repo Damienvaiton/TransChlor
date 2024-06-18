@@ -1,0 +1,21 @@
+' Explication for the INPUT2D.txt file
+'--------------- MATERIAL
+CEMI0.44DC	'Material name in the Database
+alpha       'Cement hydration degree estimated
+w           'Isotherm indicator
+H_int		'Initial relative humidity in the Material [0-1]
+T_int		'Inital temperature in the Material [°C]
+'--------------- SIMULATION
+Model	'Vapour diffusion model = 0
+        'Multiphase model = 1
+TMax	'Maximal time to simulate [s]
+DeltaT	'Time Step fo the simulation [s]
+'--------------- PLOT
+Tsauv	'Time Step for writting in the output file [s]
+'--------------- Salt concentration (Multi-ionic module)
+Na_int		'Initial Na + concentraion in the Material []
+Cl_int		'Initial Na + concentraion in the Material []
+K_int		'Initial Na + concentraion in the Material []
+OH_int		'Initial Na + concentraion in the Material []
+Ca_int		'Initial Na + concentraion in the Material []
+SO4_int		'Initial Na + concentraion in the Material []
