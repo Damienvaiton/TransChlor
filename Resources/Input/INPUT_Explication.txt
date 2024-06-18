@@ -1,0 +1,120 @@
+Il ne faut pas utiliser ce file pour le modèle, il sert simplement à expliquer les différentes valeurs utilisés dans le modèle de Lausanne.
+
+Length	100		épaisseur totale de la paroi en mm, arrondir à 10 près
+Ne	100 		nbre d'éléments, pour la résolution par éléments finis (paire)
+ChoixRep	1 	1: écart constant
+			2: écart proportionnel
+			3: écart exponentiel
+			4: plusieurs écart constant
+*si 1:			il n'y a aucun paramètre à ajouter
+*si 2:
+Le(1)	1		longeur du premier élément du bord
+*si 3:
+Le(1)	1		longeur du premier élément du bord
+*si 4:
+Nchmt	2		nbre de domaines à écart constant
+NbreEl	4		nbre d'éléments sur le premier domaine
+LenApp	40		longeur du premier domaine
+			!! il n'est pas nécessaire d'introduire le dernier domaine
+
+TimeMax	73000	temps max en jours arrivé à l'échéance le calcul s'arrête
+DeltaT	3600	pas de temps utilisé en s (il ne faut pas changer cette valeur)
+taff	720		pas de temps d'affichage des graphiques en heure durant le calcul, ici ça correspond à 30 jours
+Hsauv	8760	pas de temps de stockage dans le fichier d'output durant le calcul, ici ça correpond à une année (humidité relative)
+Wsauv	8760	pas de temps de stockage dans le fichier d'output durant le calcul, ici ça correpond à une année (teneur en eau)
+CTsauv	8760	pas de temps de stockage dans le fichier d'output durant le calcul, ici ça correpond à une année (chlorures totaux)
+CLsauv	8760	pas de temps de stockage dans le fichier d'output durant le calcul, ici ça correpond à une année (chlorures libres)
+Tsauv	8760	pas de temps de stockage dans le fichier d'output durant le calcul, ici ça correpond à une année (température)
+Carbsauv 8760	pas de temps de stockage dans le fichier d'output durant le calcul, ici ça correpond à une année (carbonatation)
+hMin	.4		résultats graphiques, valeur min pour l'humidité relative
+hEcart	.1		résultats graphiques, écart pour l'humidité relative
+wMin	50		résultats graphiques, valeur min pour la teneur en eau
+wEcart	10		résultats graphiques, écart pour la teneur en eau
+CLmin	0		résultats graphiques, valeur min pour les chlorures libres
+CLecart	1		résultats graphiques, écart pour les chlorures libres
+CTmin	0		résultats graphiques, valeur min pour les chlorures totaux
+CTecart	5		résultats graphiques, écart pour les chlorures totaux
+Tecart	5		résultats graphiques, écart pour la température
+aa	0.05		cf. éq. (3.9), thèse de Guido Roelfstra, alfa
+Hc	0.75		cf. éq. (3.9), thèse de Guido Roelfstra, hc
+ab	0.09		formulation de Bazant dans le temps, paramètre
+tc	0.97		formulation de Bazant dans le temps, paramètre
+ImpHydr false	présence d'une imprégnation hydrophobe pour la capillarité
+H_snap	.8		valeur limite de l'humidité relative, utile pour la résolution du modèle (il ne faut pas changer cette valeur)
+Retard	.7		cf. éq. (3.18), thèse de Guido Roelfstra, coefficient de retard Rcl
+aOH		.56		constante d'énergie d'adsorption de ions chlorures en fonctions du Ph
+EbG		40000	J/mol énergie d'adsorption des ions chlorures en fonction de la température
+toG		293.16	°K, température d'isotherme pour EbG
+faG		3.57	paramètre d'adsorption
+capCal	.7		capacité calorifique des granulats en kJ/kg°K
+GyCO2	.035	concentration de CO2 en % dans l'air sur le bord gauche
+DyCO2	.035	concentration de CO2 en % dans l'air sur le bord droit
+
+NEXPO	2		nbre d'exposition à résoudre (par exemple ici il va résoudre trois fois, en allant chercher une fois comme condition aux limites le fichier direct.txt, puis eclaboussures.txt et finalement brouillard.txt)
+FileGexpo() "direct"	fichier des conditions de bord pour le bord gauche, 1ère simulation
+FileDexpo() "direct"	fichier des conditions de bord pour le bord droit,  1ère simulation
+	   "eclaboussures"	fichier des conditions de bord pour le bord gauche, 2ème simulation
+	   "brouillard"		fichier des conditions de bord pour le bord droit,  2ème simulation
+NQUAL	1		nbre de béton différent en l'occurence ici pour un béton bon, moyen et mauvais (si tu supprimes un de cela n'oublies pas de changer le nombre trois)
+Filebeton()		"bon béton"	ceci s'affiche pendant le calcul
+Fileres()		"bon"	ceci apparaît dans le nom du fichier résultat
+PD		0.000194	coefficient de diffusion de l'eau en mm2/s, lorsqu'il n'y a pas de pluie
+Dcl		0.000006	coefficient de diffusion des ions chlorures dans l'eau en mm2/s
+qGran	2000	quantité de granulat en kg/m3 de béton
+LambdaH	1		coefficient de transfert depuis la surface (humidité relative)
+LambdaT	1		coefficient de transfert depuis la surface (température)
+sat		103		teneur en eau saturé, wsat
+ciment	350		quantité de ciment en kg/m3 de béton
+EC		0.4		rapport quantité d'eau sur ciment
+tProt	0		âge du béton lors du démarrage de l'analyse en jours
+Hydr	0.8		taux d'hydratation du béton
+vct		0.9		coefficient de la courbe de l'isotherme de l'adsorption dépendant du type de ciment
+Nct		1.1		coefficient de la courbe de l'isotherme de l'adsorption dépendant du type de ciment
+ED		0		coefficient d'énergie dans l'équation d'Arrhénius pour la diffusion d'eau
+ToHydr	293.16	température en °K de base dans l'équation d'Arrhénius pour la diffusion d'eau
+Ecl		0		coefficient d'énergie dans l'équation d'Arrhénius pour la diffusion des ions chlorures
+ToCl	293.16	température en °K de base dans l'équation d'Arrhénius pour la diffusion des ions chlorures
+RoA		2690	masse volumique des agrégats kg/m3
+RoC		3150	masse volumique du ciment
+		1		choix de loi probabiliste pour le coefficient de diffusion hydrique de vapeur d'eau
+		.8		rapport moyenne sur l'écart-type négatif
+		1.2		rapport moyenne sur l'écart-type positif
+		.5		poids selon la méthode de Rosenblueth
+		.5		poids selon la méthode de Rosenblueth
+		1		choix de loi probabiliste pour le coefficient de transport d'eau par capillarité
+		.8		rapport moyenne sur l'écart-type négatif
+		1.2		rapport moyenne sur l'écart-type positif
+		.5		poids selon la méthode de Rosenblueth
+		.5		poids selon la méthode de Rosenblueth
+		1		choix de loi probabiliste pour le coefficient de diffusion des ions chlorures dans l'eau
+		.8		rapport moyenne sur l'écart-type négatif
+		1.2		rapport moyenne sur l'écart-type positif
+		.5		poids selon la méthode de Rosenblueth
+		.5		poids selon la méthode de Rosenblueth	
+		1		choix de loi probabiliste pour le coefficient de diffusion du gaz carbonique
+		.8		moyenne
+		1.2		écart-type
+		.5		poids selon la méthode de Rosenblueth
+		.5		poids selon la méthode de Rosenblueth	
+		
+Nbre1	2		nbre de coordonnées pour les fichiers de conditions initiales, transport thermique [°C]
+		0		x1
+		20		y1
+		100
+		20
+Nbre2	2		nbre de coordonnées pour les fichiers de conditions initiales, transport hydrique, humidité relative [%]
+		0		x1
+		80		y1
+		100
+		80
+Nbre3	2		nbre de coordonnées pour les fichiers de conditions initiales, transport ionique, chlorure totale [kg/m3]
+		0		x1
+		0		y1
+		100
+		0
+Nombre de points de discretisation (Optionnel)
+
+	
+
+
+Voilà bon courage... et amuse-toi bien avec ce logiciel.                      David Conciatori

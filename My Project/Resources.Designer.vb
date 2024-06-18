@@ -39,7 +39,7 @@ Namespace My.Resources
         Public ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
-                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("Chloride_transport.Resources", GetType(Resources).Assembly)
+                    Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("TransChlor.Resources", GetType(Resources).Assembly)
                     resourceMan = temp
                 End If
                 Return resourceMan
@@ -322,6 +322,16 @@ Namespace My.Resources
         Public ReadOnly Property ModeEmploi_v41() As Byte()
             Get
                 Dim obj As Object = ResourceManager.GetObject("ModeEmploi_v41", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Public ReadOnly Property phreeqc() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("phreeqc", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property

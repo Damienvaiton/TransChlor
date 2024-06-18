@@ -321,6 +321,7 @@ Module Functions
         Loop
     End Function
 
+
     ''Inversion de matrice pour le transport par convection des cl-
     'Public Sub InvMaBa(ByRef L() As Decimal, ByRef b() As Decimal, ByRef Ne As Short)
     '    Dim i As Long
@@ -402,4 +403,5 @@ Module Functions
     '        Next
     '    Next
     'End Sub
+
 End Module

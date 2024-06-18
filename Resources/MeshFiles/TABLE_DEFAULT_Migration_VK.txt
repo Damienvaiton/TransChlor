@@ -1,0 +1,10 @@
+9
+1 D:\Xuande\DevXC\Resources\Exposition\EXPO_LEFT_CHLORIDE_JUL.txt
+2 D:\Xuande\DevXC\Resources\Exposition\EXPO_RIGHT_CHLORIDE_JUL.txt
+3 D:\Xuande\DevXC\Resources\Exposition\EXPO_RIGHT_CHLORIDE_JUL.txt
+4 D:\Xuande\DevXC\Resources\Exposition\EXPO_LEFT_CHLORIDE_JUL.txt
+5 Neumann
+6 Neumann
+7 D:\Xuande\DevXC\Resources\Exposition\EXPO_RIGHT_CHLORIDE_JUL.txt
+8 D:\Xuande\DevXC\Resources\Exposition\EXPO_LEFT_CHLORIDE_JUL.txt
+9 Neumann

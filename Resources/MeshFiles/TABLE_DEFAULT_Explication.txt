@@ -1,0 +1,13 @@
+''Explication for the Table_ file ---> connecting real boundary exposition file with user defined geometry file  
+9 'Number of exposition positions
+1 Neumann 'exposition file directory applied on bottom left corner point
+2 Neumann 'exposition file directory applied on top right corner point
+3 Neumann 'exposition file directory applied on bottom right corner point
+4 Neumann 'exposition file directory applied on top left corner point
+5 D:\Xuande\DevXC\Resources\Exposition\EXPO_Ref_Capillary_Cyclic1.txt 'exposition file directory applied on bottom side
+6 Neumann 'exposition file directory applied on top side
+7 Neumann 'exposition file directory applied on right side
+8 Neumann 'exposition file directory applied on left side
+9 Neumann 'exposition file directory applied on whole 2D surface
+
+''Neumann means no value assigned to this boundary
