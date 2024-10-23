@@ -381,13 +381,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TransChlorMat.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TransChlorMat_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>TransChlorMat.mdf</DependentUpon>
-    </Content>
     <None Include="app.config" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Settings.settings">

@@ -411,13 +411,14 @@ Public Class MDIChlor : Inherits System.Windows.Forms.Form
     '    End Using
     'End Sub
     'Lecture du module PhreeqC
-    Private Sub MenuItem14_Click(sender As Object, e As EventArgs) Handles MenuItem14.Click
+    '
+    'Private Sub MenuItem14_Click(sender As Object, e As EventArgs) Handles MenuItem14.Click
+    '
+    'Using frm As New frmPhreeqC
+    '        frm.ShowDialog()
+    'End Using
 
-        Using frm As New frmPhreeqC
-            frm.ShowDialog()
-        End Using
-
-    End Sub
+    'End Sub
 
     'Lecture du module FEM mechical analyse
     'Private Sub MenuItem15_Click(sender As Object, e As EventArgs) Handles MenuItem15.Click

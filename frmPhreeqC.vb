@@ -4,7 +4,7 @@ Imports IPhreeqcCOM
 Public Class frmPhreeqC
 
     Dim a As Single
-    Dim PhrObj As New IPhreeqcCOM.Object
+    'Dim PhrObj As New IPhreeqcCOM.Object
     Dim PhrInput As String = ""
     Dim PhrDatabase As String
     Dim PhrInputFile As String
@@ -96,39 +96,39 @@ b:
 
     Sub Run(ByVal input As String, ByVal Dbase As String)
 
-        Me.PhrObj.ErrorFileOn = True
-        Me.PhrDatabase = Dbase
-        Me.PhrObj.LoadDatabase(PhrDatabase)
+        ' Me.PhrObj.ErrorFileOn = True
+        'Me.PhrDatabase = Dbase
+        'Me.PhrObj.LoadDatabase(PhrDatabase)
         'Me.PhrObj.RunString(input)
 
-        Me.PhrObj.RunFile(PhrInputFile)
+        'Me.PhrObj.RunFile(PhrInputFile)
 
-        Dim OutPhreeqc(,) As Object = Me.PhrObj.GetSelectedOutputArray
-        Dim nbcolumns As Integer = OutPhreeqc.GetLength(1)
-        Dim nbrows As Integer = OutPhreeqc.GetLength(0)
-        Dim OutName(nbcolumns - 1) As String
-        Dim OutValues(nbrows - 2, nbcolumns - 1) As Double
+        'Dim OutPhreeqc(,) As Object = Me.PhrObj.GetSelectedOutputArray
+        'Dim nbcolumns As Integer = OutPhreeqc.GetLength(1)
+        'Dim nbrows As Integer = OutPhreeqc.GetLength(0)
+        'Dim OutName(nbcolumns - 1) As String
+        'Dim OutValues(nbrows - 2, nbcolumns - 1) As Double
 
 
-        For j As Integer = 0 To nbcolumns - 1
+        'For j As Integer = 0 To nbcolumns - 1
 
-            OutName(j) = OutPhreeqc(0, j)
+        'OutName(j) = OutPhreeqc(0, j)
 
-            For i As Integer = 0 To nbrows - 2
-                OutValues(i, j) = CDbl(OutPhreeqc(i + 1, j))
-            Next
+        'For i As Integer = 0 To nbrows - 2
+        'OutValues(i, j) = CDbl(OutPhreeqc(i + 1, j))
+        'Next
 
-        Next
+        'Next
 
         'define empty array, at the end of the 'for' cycle it will contain requested row's values  
-        Dim x(nbrows - 2), y(nbrows - 2) As Double
+        'Dim x(nbrows - 2), y(nbrows - 2) As Double
 
-        For i As Integer = 0 To nbrows - 2
-            x(i) = OutValues(i, 0) * 1000
-            y(i) = OutValues(i, 1)
-        Next
-
-        frmPhreeqC_Plot(x, y)
+        '        For i As Integer = 0 To nbrows - 2
+        '       x(i) = OutValues(i, 0) * 1000
+        '      y(i) = OutValues(i, 1)
+        '     Next
+        '
+        ' frmPhreeqC_Plot(x, y)
 
     End Sub
 
