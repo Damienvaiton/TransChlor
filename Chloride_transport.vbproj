@@ -215,13 +215,8 @@
     <Compile Include="CIETransNew.vb" />
     <Compile Include="CETrans.vb" />
     <Compile Include="CIETrans_MI.vb" />
-    <Compile Include="Compute2D.vb" />
-    <Compile Include="Compute2Dtrial.vb" />
     <Compile Include="DBConnexion.vb" />
     <Compile Include="Exposition.vb" />
-    <Compile Include="frmInput2D.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FrmMeteoDatabase.Designer.vb">
       <DependentUpon>FrmMeteoDatabase.vb</DependentUpon>
     </Compile>
@@ -249,12 +244,6 @@
     <Compile Include="frmGraph1DAxe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTrans2D.Designer.vb">
-      <DependentUpon>frmTrans2D.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTrans2D.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmGraph1D.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -279,12 +268,10 @@
     <Compile Include="Functions.vb">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Functions2D.vb" />
     <Compile Include="Graph1D.vb">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="HETrans.vb" />
-    <Compile Include="OutputFile2D.vb" />
     <Compile Include="Table_PHYS_EXPO.vb" />
     <Compile Include="TETrans.vb" />
     <Compile Include="TransportXC.vb" />
@@ -322,9 +309,6 @@
     <Compile Include="frmMeteo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <EmbeddedResource Include="frmInput2D.resx">
-      <DependentUpon>frmInput2D.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMeteoDatabase.resx">
       <DependentUpon>FrmMeteoDatabase.vb</DependentUpon>
     </EmbeddedResource>
@@ -333,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGraph1DAxe.resx">
       <DependentUpon>frmGraph1DAxe.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTrans2D.resx">
-      <DependentUpon>frmTrans2D.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGraph1D.resx">
       <DependentUpon>frmGraph1D.vb</DependentUpon>

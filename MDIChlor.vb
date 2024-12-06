@@ -116,14 +116,9 @@ Public Class MDIChlor : Inherits System.Windows.Forms.Form
         Me._MnuProject_4.MergeType = System.Windows.Forms.MenuMerge.Remove
         Me._MnuProject_4.Text = "-"
         '
-        'MenuItem14
-        '
-        Me.MenuItem14.Index = 1
-        Me.MenuItem14.Text = "PhreeqC"
-        '
         '_MnuProject_5
         '
-        Me._MnuProject_5.Index = 2
+        Me._MnuProject_5.Index = 1
         Me._MnuProject_5.MergeType = System.Windows.Forms.MenuMerge.Remove
         Me._MnuProject_5.Text = "E&xit"
         '
@@ -164,25 +159,9 @@ Public Class MDIChlor : Inherits System.Windows.Forms.Form
         Me.MenuItem8.Index = 2
         Me.MenuItem8.Text = "Graph 1D"
         '
-        'MenuItem13
-        '
-        Me.MenuItem13.Index = 3
-        Me.MenuItem13.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem15, Me.Calcul2D})
-        Me.MenuItem13.Text = "Transport 2D "
-        '
-        'MenuItem15
-        '
-        Me.MenuItem15.Index = 0
-        Me.MenuItem15.Text = "Input 2D"
-        '
-        'Calcul2D
-        '
-        Me.Calcul2D.Index = 1
-        Me.Calcul2D.Text = "Calcul 2D"
-        '
         'MenuItem3
         '
-        Me.MenuItem3.Index = 4
+        Me.MenuItem3.Index = 3
         Me.MenuItem3.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem4, Me.MenuItem9, Me.MenuItem16})
         Me.MenuItem3.Text = "Probabilistic"
         '
@@ -203,7 +182,7 @@ Public Class MDIChlor : Inherits System.Windows.Forms.Form
         '
         'MenuItem10
         '
-        Me.MenuItem10.Index = 5
+        Me.MenuItem10.Index = 4
         Me.MenuItem10.MenuItems.AddRange(New System.Windows.Forms.MenuItem() {Me.MenuItem11, Me.MenuItem12})
         Me.MenuItem10.Text = "?"
         '
@@ -268,8 +247,6 @@ Public Class MDIChlor : Inherits System.Windows.Forms.Form
     Dim Para5 As Short = 0
     Public Prefile As String
 
-    Dim frm2D As New FrmTrans2D
-
     'Dim diff As New DiffusionXC
     'Dim transport As New HydriqueXC
     'Dim directoryPath As String
@@ -287,11 +264,6 @@ Public Class MDIChlor : Inherits System.Windows.Forms.Form
         Me.IsMdiContainer = True
         Me.WindowState = FormWindowState.Maximized
 
-        frm2D.Left = 0
-        frm2D.Top = 0
-        frm2D.Height = (Me.Height)
-        frm2D.Width = (Me.Width)
-        frm2D.Hide()
 
     End Sub
     Private Sub _MnuProject_5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles _MnuProject_5.Click
@@ -430,55 +402,11 @@ Public Class MDIChlor : Inherits System.Windows.Forms.Form
     'Operation pour calcul diffusion 2D  'Xuande 30/06/2020
     Private Sub Calcul2DMenuItem_Click(sender As Object, e As EventArgs) Handles Calcul2D.Click
 
-        ''Lecture du fichier Maillage dans le menu 'Xuande 10/06/2020
-        'Dim d As New OpenFileDialog
-        'Dim directoryPath As String
-        'd.Title = "Open Mesh file"
-        'd.Filter = "Mesh files (*.msh)|*.msh"
 
-        'If d.ShowDialog = DialogResult.OK Then
-
-        '    If ReadFile(d.FileName) = False Then
-        '        MsgBox("Error with Mesh file.", MsgBoxStyle.OkOnly And MsgBoxStyle.Information, "Mesh file")
-        '        MeshFileOk = False
-        '    ElseIf ReadFile(d.FileName) = True Then
-        '        MsgBox("Mesh file imported successfully!", MsgBoxStyle.OkOnly And MsgBoxStyle.Information, "Mesh file")
-        '        MeshFileOk = True
-        '    End If
-        '    'DrawModel()
-
-        'End If
-
-        'directoryPath = Path.GetDirectoryName(d.FileName) ' Thomas : Ligne pour récuperer le chemin du fichier
-
-        ''check if there is a proper model
-        'If NElements <= 0 OrElse NNodes <= 0 Then
-        '    'there are no elements defined
-        '    MsgBox("Error reading number of elements and nodes, please open a proper mesh file")
-        'Else
-        '    MsgBox("Mesh file ready for simulation!", MsgBoxStyle.OkOnly And MsgBoxStyle.Information, "Mesh file")
-        '    'perform analysis using the 2D finite element diffusion module 
-        '    diff.Analyse(NNodes, NElements, Nodes, Elements)
-        '    Return
-
-        'End If
-
-        frm2D.MdiParent = Me
-        frm2D.Show()
-
-        'Using frm04 As New frmbtFem
-        'frm04.ShowDialog()
-        'End Using
 
     End Sub
 
-    Private Sub MenuItem15_Click(sender As Object, e As EventArgs) Handles MenuItem15.Click
 
-        Using frm As New frmInput2D
-            frm.ShowDialog()
-        End Using
-
-    End Sub
 
     Private Sub MenuItem7_Click(sender As Object, e As EventArgs) Handles MenuItem7.Click
 
