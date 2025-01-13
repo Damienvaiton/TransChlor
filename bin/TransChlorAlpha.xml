@@ -1,0 +1,378 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TransChlorAlpha
+</name>
+</assembly>
+<members>
+<member name="T:TransChlor.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.CIH_lunk">
+<summary>
+  Looks up a localized string similar to 2
+0
+100
+300
+100.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.CII_lunk">
+<summary>
+  Looks up a localized string similar to 2
+0
+0
+300
+0.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.CIT_lunk">
+<summary>
+  Looks up a localized string similar to 2
+0
+20
+300
+20.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.INPUT_Explication">
+<summary>
+  Looks up a localized string similar to Il ne faut pas utiliser ce file pour le modèle, il sert simplement à expliquer les différentes valeurs utilisés dans le modèle de Lausanne.
+
+Length	100		épaisseur totale de la paroi en mm, arrondir à 10 près
+Ne	100 		nbre d&apos;éléments, pour la résolution par éléments finis (paire)
+ChoixRep	1 	1: écart constant
+			2: écart proportionnel
+			3: écart exponentiel
+			4: plusieurs écart constant
+*si 1:			il n&apos;y a aucun paramètre à ajouter
+*si 2:
+Le(1)	1		longeur du premier élément du bord
+*si 3:
+Le(1)	1 [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_DAVOS">
+<summary>
+  Looks up a localized string similar to Numero et nom de la station Anetz:  28 - Davos               
+Donnees du:  6.1982 au  5.2003
+Date	Heure	    6	   13	   17	   22	   80
+19820601	00	   61	  700	    0	   -1	32767
+19820601	01	   56	  734	    0	   -1	32767
+19820601	02	   57	  731	    0	   -2	32767
+19820601	03	   52	  763	    0	    3	32767
+19820601	04	   50	  772	    0	   29	32767
+19820601	05	   62	  697	    0	  152	    0
+19820601	06	   94	  548	    0	  378	32767
+19820601	07	  128	  400	    0	  559	32767
+19820601	08	  150	  270	    0	  [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_DENEVE">
+<summary>
+  Looks up a localized string similar to Numero	et	nom	de	la	station	Anetz:	28	-	Davos
+Donnees	du:	6.1982	au	5.2003					
+Date	Heure	6	13	17	22	80			
+19820601	0	19	801	0	-1	32767			
+19820601	1	27	740	0	-1	32767			
+19820601	2	50	747	0	-2	32767			
+19820601	3	57	802	0	3	32767			
+19820601	4	51	874	0	29	32767			
+19820601	5	15	901	0	152	0			
+19820601	6	1	910	0	378	32767			
+19820601	7	14	910	0	559	32767			
+19820601	8	7	910	0	726	32767			
+19820601	9	-1	910	0	856	32767			
+19820601	10	-1	910	0	940	32767			
+19820601	11	2	910	0	976	32767			
+1982 [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_GDSTBERNARD">
+<summary>
+  Looks up a localized string similar to Numero et nom de la station Anetz:  35 - Grand St.Bernard    
+Donnees du:  6.1982 au  5.2003
+Date	Heure	    6	   13	   17	   22
+19820601	00	   33	  814	    0	    1
+19820601	01	   33	  802	    0	    0
+19820601	02	   33	  798	    0	    1
+19820601	03	   31	  816	    0	    1
+19820601	04	   33	  740	    0	   18
+19820601	05	   38	  691	    0	  118
+19820601	06	   44	  674	    0	  316
+19820601	07	   47	  669	    0	  542
+19820601	08	   50	  654	    0	  560
+19820601	09	   54	  594	    0	  566
+19820601	10 [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_GUETSCH">
+<summary>
+  Looks up a localized string similar to Numero et nom de la station Anetz:  33 - Guetsch             
+Donnees du:  6.1982 au  5.2003
+Date	Heure	    6	   13	   17	   22	   80
+19820601	00	   46	  702	    0	    0	32767
+19820601	01	   45	  698	    0	    2	32767
+19820601	02	   43	  716	    0	   -1	32767
+19820601	03	   50	  669	    0	    0	32767
+19820601	04	   47	  668	    0	   37	32767
+19820601	05	   49	  673	    0	  178	    0
+19820601	06	   56	  659	    0	  364	32767
+19820601	07	   65	  603	    0	  548	32767
+19820601	08	   73	  562	    0	  [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_LOCARNOMONTI">
+<summary>
+  Looks up a localized string similar to Numero et nom de la station Anetz:  59 - Locarno-Monti       
+Donnees du:  6.1982 au  5.2003
+Date	Heure	    6	   13	   17	   22	   80
+19820601	00	  167	  702	    0	   -1	32767
+19820601	01	  165	  714	    0	   -2	32767
+19820601	02	  159	  747	    0	    1	32767
+19820601	03	  159	  748	    0	    0	32767
+19820601	04	  157	  757	    0	   27	32767
+19820601	05	  161	  765	    0	  129	    0
+19820601	06	  171	  715	    0	  277	32767
+19820601	07	  183	  649	    0	  447	32767
+19820601	08	  202	  596	    0	  [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_LUGANO">
+<summary>
+  Looks up a localized string similar to Numero et nom de la station Anetz:  17 - Lugano              
+Donnees du:  6.1982 au  5.2003
+Date	Heure	    6	   13	   17	   22	   80
+19820601	00	  169	  743	    0	   -3	32767
+19820601	01	  165	  772	    0	   -2	32767
+19820601	02	  160	  789	    0	   -3	32767
+19820601	03	  154	  801	    0	    1	32767
+19820601	04	  154	  806	    0	   29	32767
+19820601	05	  159	  801	    0	  102	    0
+19820601	06	  178	  740	    0	  279	32767
+19820601	07	  188	  689	    0	  474	32767
+19820601	08	  197	  698	    0	  [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_PULLY">
+<summary>
+  Looks up a localized string similar to Numero et nom de la station Anetz:  34 - Pully               
+Donnees du:  6.1982 au  5.2003
+Date	Heure	    6	   13	   17	   22	   80
+19820601	00	  175	  686	    0	    1	32767
+19820601	01	  173	  717	    0	    1	32767
+19820601	02	  167	  763	    0	    2	32767
+19820601	03	  163	  787	    0	    0	32767
+19820601	04	  157	  811	    0	   23	32767
+19820601	05	  163	  772	    0	  112	    0
+19820601	06	  172	  781	    0	  268	32767
+19820601	07	  184	  715	    0	  447	32767
+19820601	08	  186	  685	    0	  [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_SION">
+<summary>
+  Looks up a localized string similar to Numero et nom de la station Anetz:  21 - Sion                
+Donnees du:  6.1982 au  5.2003
+Date	Heure	    6	   13	   17	   22	   80
+19820601	00	  129	  788	    0	    1	32767
+19820601	01	  138	  718	    0	    0	32767
+19820601	02	  129	  704	    0	   -1	32767
+19820601	03	  131	  695	    0	    2	32767
+19820601	04	  130	  705	    0	   22	32767
+19820601	05	  142	  666	    0	  105	    0
+19820601	06	  167	  576	    0	  267	32767
+19820601	07	  195	  434	    0	  482	32767
+19820601	08	  213	  378	    0	  [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.METEO_ZUERICHKLOTEN">
+<summary>
+  Looks up a localized string similar to Numero et nom de la station Anetz:  32 - Zuerich-Kloten      
+Donnees du:  6.1982 au  5.2003
+Date	Heure	    6	   13	   17	   22	   80
+19820601	00	  144	  859	    0	    1	32767
+19820601	01	  136	  887	    0	    0	32767
+19820601	02	  132	  906	    0	   -1	32767
+19820601	03	  120	  925	    0	    2	32767
+19820601	04	  125	  911	    0	   39	32767
+19820601	05	  138	  849	    0	  142	    0
+19820601	06	  167	  734	    0	  298	32767
+19820601	07	  189	  632	    0	  456	32767
+19820601	08	  210	  531	    0	  [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.ModeEmploi_v4">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.ModeEmploi_v41">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="P:TransChlor.My.Resources.Resources.phreeqc">
+<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member>
+<member name="M:TransChlor.CIETransNew.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Initializes a new instance of CIE element
+ </summary>
+ <param name="x1"></param>
+ <param name="y1"></param>
+ <param name="x2"></param>
+ <param name="y2"></param>
+ <param name="x3"></param>
+ <param name="y3"></param>
+ <param name="x4"></param>
+ <param name="y4"></param>
+ <param name="DiffCoeff_p1"></param>
+ <param name="DiffCoeff_p2"></param>
+ <param name="DiffCoeff_p3"></param>
+ <param name="DiffCoeff_p4"></param>
+</member>
+<member name="M:TransChlor.CIETransNew.getbe">
+ Returns the integrated [be] matrix by Gauss sommation method
+</member>
+<member name="M:TransChlor.CIETransNew.getAe">
+ Returns the integrated [Ae] matrix by Gauss sommation method
+</member>
+<member name="M:TransChlor.CETrans.#ctor(System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Initializes a new instance of HE element
+ </summary>
+ <param name="c1"></param>
+ <param name="c2"></param>
+ <param name="c3"></param>
+ <param name="c4"></param>
+</member>
+<member name="M:TransChlor.CIETrans_MI.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Initializes a new instance of CIE element
+ </summary>
+ <param name="x1"></param>
+ <param name="y1"></param>
+ <param name="x2"></param>
+ <param name="y2"></param>
+ <param name="x3"></param>
+ <param name="y3"></param>
+ <param name="x4"></param>
+ <param name="y4"></param>
+ <param name="d1"></param>
+ <param name="d2"></param>
+ <param name="d3"></param>
+ <param name="d4"></param>
+ <param name="wr"></param>
+ <param name="F"></param>
+ <param name="z"></param>
+ <param name="E"></param>
+ <param name="R"></param>
+ <param name="T"></param>
+ <param name="grad_logGamma"></param>
+</member>
+<member name="M:TransChlor.CIETrans_MI.getbe_MI">
+ Returns the integrated [be_MI] matrix by Gauss sommation method
+</member>
+<member name="M:TransChlor.CIETrans_MI.getAe_MI">
+ Returns the integrated [Ae_MI] matrix by Gauss sommation method
+</member>
+<member name="M:TransChlor.CST.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Initializes a new instance of CST element
+ </summary>
+ <param name="x1"></param>
+ <param name="y1"></param>
+ <param name="x2"></param>
+ <param name="y2"></param>
+ <param name="x3"></param>
+ <param name="y3"></param>
+ <param name="Thickness"></param>
+ <param name="ElasticityModulus"></param>
+ <param name="PoissonRatio"></param>
+</member>
+<member name="M:TransChlor.CST.getDetJ">
+ <summary>
+ Returns the determinant of the Jacobian
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TransChlor.CST.getB">
+ <summary>
+ Returns the [B] matrix
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TransChlor.CST.MultiplyMatrices(System.Double[0:,0:]@,System.Double[0:,0:]@)">
+ <summary>
+ Multiplies matrix a by b and returns the product
+ </summary>
+ <param name="a"></param>
+ <param name="b"></param>
+ <returns></returns>
+</member>
+<member name="M:TransChlor.HETrans.#ctor(System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Initializes a new instance of HE element
+ </summary>
+ <param name="h1"></param>
+ <param name="h2"></param>
+ <param name="h3"></param>
+ <param name="h4"></param>
+</member>
+<member name="M:TransChlor.TETrans.#ctor(System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Initializes a new instance of HE element
+ </summary>
+ <param name="t1"></param>
+ <param name="t2"></param>
+ <param name="t3"></param>
+ <param name="t4"></param>
+</member>
+<member name="M:TransChlor.CIETrans.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Initializes a new instance of CIE element
+ </summary>
+ <param name="x1"></param>
+ <param name="y1"></param>
+ <param name="x2"></param>
+ <param name="y2"></param>
+ <param name="x3"></param>
+ <param name="y3"></param>
+ <param name="x4"></param>
+ <param name="y4"></param>
+ <param name="DiffCoeff"></param>
+</member>
+<member name="M:TransChlor.CIETrans.Getbe">
+ Returns the integrated [be] matrix by Gauss sommation method
+</member>
+<member name="M:TransChlor.CIETrans.getAe">
+ Returns the integrated [Ae] matrix by Gauss sommation method
+</member>
+<member name="M:TransChlor.SETrans.#ctor(System.Double,System.Double,System.Double,System.Double)">
+ <summary>
+ Initializes a new instance of HE element
+ </summary>
+ <param name="s1"></param>
+ <param name="s2"></param>
+ <param name="s3"></param>
+ <param name="s4"></param>
+</member>
+</members>
+</doc>

@@ -1,0 +1,22 @@
+SOLUTION 1
+    ph 7
+    temp 25.0
+END
+
+INCREMENTAL_REACTIONS true
+
+REACTION
+    NaCl 1.0
+    0 100*0.01 mmol
+
+EQUILIBRIUM_PHASES
+    Monosulfoaluminate 0 10
+    Friedel-salt 0 0
+
+USE SOLUTION 1
+
+SELECTED_OUTPUT
+    -reset false
+    -total Cl
+    -eq Monosulfoaluminate
+END
