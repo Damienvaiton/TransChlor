@@ -141,8 +141,6 @@ Public Class frmMeteo : Inherits System.Windows.Forms.Form
     Friend WithEvents Label77 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents NumericUpDown25 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents ButtonExportDB As Button
-    Friend WithEvents LabelOR As Label
     Friend WithEvents Label78 As System.Windows.Forms.Label
     <System.Diagnostics.DebuggerStepThrough()> Private Sub InitializeComponent()
         Me.ButtonExportFile = New System.Windows.Forms.Button()
@@ -259,8 +257,6 @@ Public Class frmMeteo : Inherits System.Windows.Forms.Form
         Me.Label64 = New System.Windows.Forms.Label()
         Me.NumericUpDown22 = New System.Windows.Forms.NumericUpDown()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ButtonExportDB = New System.Windows.Forms.Button()
-        Me.LabelOR = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         CType(Me.NumericUpDown25, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1396,28 +1392,9 @@ Public Class frmMeteo : Inherits System.Windows.Forms.Form
         Me.Button1.TabIndex = 67
         Me.Button1.Text = "Calculer"
         '
-        'ButtonExportDB
-        '
-        Me.ButtonExportDB.Location = New System.Drawing.Point(795, 580)
-        Me.ButtonExportDB.Name = "ButtonExportDB"
-        Me.ButtonExportDB.Size = New System.Drawing.Size(105, 32)
-        Me.ButtonExportDB.TabIndex = 68
-        Me.ButtonExportDB.Text = "Export Database"
-        '
-        'LabelOR
-        '
-        Me.LabelOR.AutoSize = True
-        Me.LabelOR.Location = New System.Drawing.Point(771, 590)
-        Me.LabelOR.Name = "LabelOR"
-        Me.LabelOR.Size = New System.Drawing.Size(25, 15)
-        Me.LabelOR.TabIndex = 69
-        Me.LabelOR.Text = "OR"
-        '
         'frmMeteo
         '
         Me.ClientSize = New System.Drawing.Size(912, 616)
-        Me.Controls.Add(Me.LabelOR)
-        Me.Controls.Add(Me.ButtonExportDB)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -1463,7 +1440,6 @@ Public Class frmMeteo : Inherits System.Windows.Forms.Form
         CType(Me.NumericUpDown21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown22, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -1482,7 +1458,7 @@ Public Class frmMeteo : Inherits System.Windows.Forms.Form
         Me.Close()
     End Sub
 
-    Private Sub ButtonExportDB_Click(sender As Object, e As EventArgs) Handles ButtonExportDB.Click
+    Private Sub ButtonExportDB_Click(sender As Object, e As EventArgs)
 
         If CStr(NumericUpDown3.Value) = "" Then
             MsgBox("Manque une concentration d'épandage de NaCl dans l'eau", MsgBoxStyle.Exclamation And MsgBoxStyle.OkOnly, "Avertissement")
@@ -1511,15 +1487,11 @@ Public Class frmMeteo : Inherits System.Windows.Forms.Form
 
     Private Sub NumericUpDown_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NumericUpDown3.ValueChanged
         ButtonExportFile.Hide()
-        ButtonExportDB.Hide()
-        LabelOR.Hide()
     End Sub
 
 
     Private Sub NumericUpDown_LostFocus(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NumericUpDown3.LostFocus
         ButtonExportFile.Hide()
-        ButtonExportDB.Hide()
-        LabelOR.Hide()
     End Sub
 
     Private Sub NumericUpDown1_Leave(ByVal sender As System.Object, ByVal e As System.EventArgs)

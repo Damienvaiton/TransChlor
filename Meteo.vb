@@ -362,8 +362,6 @@ Module Meteo
         frmTempSeuil.NumericUpDown1.Text = 10
 
         frmTempSeuil.ButtonExportFile.Hide()
-        frmTempSeuil.ButtonExportDB.Hide()
-        frmTempSeuil.LabelOR.Hide()
         frmTempSeuil.ShowDialog()
         frmTempSeuil.Hide()
 
@@ -830,110 +828,6 @@ Module Meteo
 
     End Sub
 
-    Public Sub WriteExpoDatabase()
-
-        'écriture dans la database
-
-        Dim Name As String = InputBox("Name of the localisation", "New Exposition in the database", "Davos")
-        Dim Description As String = InputBox("Description of the localisation", "New Exposition in the database", "Swiss Mountain")
-        Description = Name + ", " + Description
-
-        Dim DBCon As New DBconnexion
-
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_E_E_", "Manuel", "Eclaboussure", "Ensoleillé")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_E_O_", "Manuel", "Eclaboussure", "Ombré")
-
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_B_E_", "Manuel", "Brouillard", "Ensoleillé")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_B_O_", "Manuel", "Brouillard", "Ombré")
-
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_D_E_", "Manuel", "Direct", "Ensoleillé")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_D_O_", "Manuel", "Direct", "Ombré")
-
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_EXT_", "Manuel", "AbriPrecipitation", "")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_CAI_", "Manuel", "Caisson", "")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_CAC_", "Manuel", "CaissonAvecChlore", "")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_M_BIT_", "Manuel", "Bitume", "")
-
-
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_E_E_", "Automatique", "Eclaboussure", "Ensoleillé")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_E_O_", "Automatique", "Eclaboussure", "Ombré")
-
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_B_E_", "Automatique", "Brouillard", "Ensoleillé")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_B_O_", "Automatique", "Brouillard", "Ombré")
-
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_D_E_", "Automatique", "Direct", "Ensoleillé")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_D_O_", "Automatique", "Direct", "Ombré")
-
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_EXT_", "Automatique", "AbriPrecipitation", "")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_CAI_", "Automatique", "Caisson", "")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_CAC_", "Automatique", "CaissonAvecChlore", "")
-        WriteExpoToDB(DBCon, Name, Description, "EXPO_A_BIT_", "Automatique", "Bitume", "")
-
-        MsgBox("Database updated successfully !")
-
-    End Sub
-
-    Private Sub WriteExpoToDB(ByRef DBCon As DBconnexion, ByRef Name As String, ByRef Description As String, ByRef PrefixName As String,
-                              ByRef Epandage As String, ByRef ExpositionCond As String, ByRef Zone As String)
-
-        Dim cmd As String = "INSERT INTO ExpositionList (Name, Description, Epandage, ExpositionCond, Zone, Hours) VALUES ('" + PrefixName + Name + "', '" + Description + "', '" + Epandage + "', '" + ExpositionCond + "', '" + Zone + "', " + CStr(iAnzahl) + ")"
-        DBCon.DBRequest(cmd)
-        cmd = "CREATE TABLE [dbo].[" + PrefixName + Name + "] ([Id] INT IDENTITY (1, 1) NOT NULL, [HR] FLOAT (53) NULL, [NaCl] FLOAT (53) NOT NULL, [T] FLOAT (53) NOT NULL, [Year] FLOAT (53), PRIMARY KEY CLUSTERED ([Id] ASC))"
-        DBCon.DBRequest(cmd)
-
-        'Dim Expo As New MaterialsData
-        'Expo.Tables.Add(PrefixName + Name)
-        DBCon.DBRequest("SELECT * FROM " + PrefixName + Name)
-        'DBCon.MatFill(Expo, PrefixName + Name)
-
-        Dim HR, NaCl, T, Year As Double
-
-        For i As Integer = 0 To iAnzahl - 1
-
-            'Dim newRow As DataRow = Expo.Tables(PrefixName + Name).NewRow()
-
-            If ExpositionCond = "Eclaboussure" Then
-                'newRow("HR") = arrMatrice(i).HR_eclaboussures
-            ElseIf ExpositionCond = "Brouillard" Then
-                'newRow("HR") = arrMatrice(i).HR_brouillard
-            ElseIf ExpositionCond = "Direct" Then
-                'newRow("HR") = arrMatrice(i).HR_direct
-            ElseIf ExpositionCond = "Bitume" Then
-                'newRow("HR") = arrMatrice(i).HR_bitume
-            ElseIf ExpositionCond = "AbriPrecipitation" Then
-                'newRow("HR") = arrMatrice(i).HR_ext
-            Else
-                'newRow("HR") = arrMatrice(i).HR_caisson
-            End If
-
-            If Epandage = "Manuel" Then
-                'newRow("NaCl") = arrMatrice(i).salage1
-            Else
-                'newRow("NaCl") = arrMatrice(i).salage2
-            End If
-
-            If Zone = "Ensoleillé" Then
-                'newRow("T") = arrMatrice(i).Ts
-            ElseIf Zone = "Ombré" Or ExpositionCond = "Bitume" Then
-                'newRow("T") = arrMatrice(i).T
-            ElseIf ExpositionCond = "AbriPrecipitation" Then
-                'newRow("T") = arrMatrice(i).Text
-            ElseIf ExpositionCond = "Caisson" Or ExpositionCond = "CaissonAvecChlore" Then
-                'newRow("T") = arrMatrice(i).Tcaisson
-            Else
-                'newRow("T") = arrMatrice(i).T
-            End If
-
-            'newRow("Year") = arrMatrice(i).year2
-
-            'Expo.Tables(PrefixName + Name).Rows.Add(newRow)
-
-        Next
-
-        'DBCon.DBUpdate(Expo, PrefixName + Name)
-
-    End Sub
-
     Public Sub MeteoTreatment()
 
         Dim outfile As String
@@ -956,9 +850,6 @@ Module Meteo
 
         If Export = "File" Then
             WriteExpoFile(outfile, PostFile, txtfile, Canc)
-
-        ElseIf Export = "DB" Then
-            WriteExpoDatabase()
 
         Else MsgBox("Error: Don't understand file or Database ??")
 
@@ -1051,8 +942,6 @@ Module Meteo
         frmTempSeuil.Label66.Text = CInt(Tseuil2 * 10) / 10
 
         frmTempSeuil.ButtonExportFile.Show()
-        frmTempSeuil.ButtonExportDB.Show()
-        frmTempSeuil.LabelOR.Show()
 
         'Ecriture des données des champs dans un fichier texte
         Dim textFilePath As String = "C:\Users\flori\Documents\Cours\A3\SAE\out\meteo_output.txt"

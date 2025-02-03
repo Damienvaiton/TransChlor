@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TransChlorAlpha.exe" size="67526144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TransChlorAlpha.exe" size="67522560">
       <assemblyIdentity name="TransChlorAlpha" version="2.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sACIFlZD/g1DF6G01sKorwITlEsJZ3MLvFFlRm6fcOU=</dsig:DigestValue>
+        <dsig:DigestValue>WQHRL4aSHQOqbixqBUg8K+La+U3bszsDTycM8Vx4czU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
