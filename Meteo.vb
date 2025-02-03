@@ -1,3 +1,5 @@
+Imports System.IO
+
 Module Meteo
 
     Dim DataLength As Integer = 440000
@@ -319,7 +321,6 @@ Module Meteo
             arrDaten(i) = arrDaten(i + startmax)
         Next
         ReDim Preserve arrDaten(iAnzahl - 1)
-
     End Sub
 
     Public Sub InputDeicingSalt()
@@ -356,14 +357,28 @@ Module Meteo
 
         Dim qNaCl1 As Single = 20.83519974 * NDH + 211.3117439   'quantité par an en g/m2 de sel déversé sur la chaussée
         Dim qNaCl2 As Single = 20.83519974 * NDH - 72.9892168  'quantité par an en g/m2 de sel déversé sur la chaussée
-
         frmTempSeuil.Label3.Text = CInt(qNaCl1)
         frmTempSeuil.Label74.Text = CInt(qNaCl2)
         frmTempSeuil.NumericUpDown1.Text = 10
 
         frmTempSeuil.ButtonExportFile.Hide()
+
+        'Ecriture des données des champs dans un fichier texte
+        Dim baseDirectory As String = My.Application.Info.DirectoryPath
+        Dim outDirectory As String = Path.Combine(baseDirectory, "out")
+        Dim textFilePath As String = Path.Combine(outDirectory, "form_meteo_output.txt")
+
+
+        If Not Directory.Exists(outDirectory) Then
+            Directory.CreateDirectory(outDirectory)
+        End If
+        WriteMeteoFormToTextFile(textFilePath)
+
+
         frmTempSeuil.ShowDialog()
         frmTempSeuil.Hide()
+
+
 
         'calcul de la concentration en NaCl dans l'eau
         Dim DureeInt As Short = frmTempSeuil.NumericUpDown2.Text
@@ -434,7 +449,6 @@ Module Meteo
             If arrMatrice(i).salage1 > EpNa1 Then arrMatrice(i).salage1 = EpNa1 'keep the maximal value
             If arrMatrice(i).salage2 > EpNa2 Then arrMatrice(i).salage2 = EpNa2
         Next
-
 
 
     End Sub
@@ -842,6 +856,8 @@ Module Meteo
 
         Troubleshoot()
 
+
+
         InputDeicingSalt()
 
         CalculTHS()
@@ -944,9 +960,15 @@ Module Meteo
         frmTempSeuil.ButtonExportFile.Show()
 
         'Ecriture des données des champs dans un fichier texte
-        Dim textFilePath As String = "C:\Users\flori\Documents\Cours\A3\SAE\out\meteo_output.txt"
-        WriteMeteoToTextFile(textFilePath)
+        Dim baseDirectory As String = My.Application.Info.DirectoryPath
+        Dim outDirectory As String = Path.Combine(baseDirectory, "out")
+        Dim textFilePath = Path.Combine(outDirectory, "calc_form_meteo_output.txt")
 
+
+        If Not Directory.Exists(outDirectory) Then
+            Directory.CreateDirectory(outDirectory)
+        End If
+        WriteMeteoCalcToTextFile(textFilePath)
     End Sub
 
     Private Sub CalNeige()
@@ -1005,8 +1027,6 @@ Module Meteo
             Next i
         End If
     End Sub
-
-
 
     Private Sub AttenBruit(ByRef A As Single, ByRef B As Single, ByRef C As Single, ByRef D As Single, ByRef tempInput() As Single, ByRef tempOutput() As Single, ByRef tlim As Single)
         Dim dT1 As Single
@@ -1067,10 +1087,61 @@ Module Meteo
             Next
             If l = iAnzahl - 1 Then Exit For
         Next
-
     End Sub
 
-    Public Sub WriteMeteoToTextFile(ByRef outFilePath As String)
+    Public Sub WriteMeteoFormToTextFile(ByRef outFilePath As String)
+        ' Ouvrir le fichier texte en mode écriture
+        Dim nFic As Integer = FreeFile()
+        FileOpen(nFic, outFilePath, OpenMode.Output)
+
+
+        PrintLine(nFic, frmTempSeuil.Label12.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown6.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown5.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown3.Value)
+
+        PrintLine(nFic, frmTempSeuil.Label3.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown1.Value)
+        'PrintLine(nFic, frmTempSeuil.Label6.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown2.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown4.Value)
+        'PrintLine(nFic, frmTempSeuil.Label22.Text)
+
+        PrintLine(nFic, frmTempSeuil.Label74.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown24.Value)
+        'PrintLine(nFic, frmTempSeuil.Label76.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown25.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown23.Value)
+        'PrintLine(nFic, frmTempSeuil.Label66.Text)
+
+        PrintLine(nFic, frmTempSeuil.NumericUpDown8.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown7.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown9.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown10.Value)
+        PrintLine(nFic, frmTempSeuil.TextBox1.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown13.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown14.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown11.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown12.Value)
+        PrintLine(nFic, frmTempSeuil.TextBox2.Text)
+
+        PrintLine(nFic, frmTempSeuil.NumericUpDown21.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown22.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown19.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown20.Value)
+        PrintLine(nFic, frmTempSeuil.TextBox4.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown17.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown18.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown15.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown16.Value)
+        PrintLine(nFic, frmTempSeuil.TextBox3.Text)
+
+
+        ' Fermer le fichier
+        FileClose(nFic)
+    End Sub
+
+    Public Sub WriteMeteoCalcToTextFile(ByRef outFilePath As String)
         ' Ouvrir le fichier texte en mode écriture
         Dim nFic As Integer = FreeFile()
         FileOpen(nFic, outFilePath, OpenMode.Output)
