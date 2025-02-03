@@ -945,9 +945,6 @@ Module Meteo
 
         If Canc = True Then End
 
-        ' Écrire les données dans un fichier texte
-
-
 
         Troubleshoot()
 
@@ -1057,6 +1054,7 @@ Module Meteo
         frmTempSeuil.ButtonExportDB.Show()
         frmTempSeuil.LabelOR.Show()
 
+        'Ecriture des données des champs dans un fichier texte
         Dim textFilePath As String = "C:\Users\flori\Documents\Cours\A3\SAE\out\meteo_output.txt"
         WriteMeteoToTextFile(textFilePath)
 
@@ -1188,7 +1186,7 @@ Module Meteo
         Dim nFic As Integer = FreeFile()
         FileOpen(nFic, outFilePath, OpenMode.Output)
 
-        ' Écrire l'en-tête du fichier
+
         PrintLine(nFic, frmTempSeuil.Label12.Text)
         PrintLine(nFic, frmTempSeuil.NumericUpDown6.Value)
         PrintLine(nFic, frmTempSeuil.NumericUpDown5.Value)
