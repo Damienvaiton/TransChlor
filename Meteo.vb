@@ -437,6 +437,8 @@ Module Meteo
             If arrMatrice(i).salage2 > EpNa2 Then arrMatrice(i).salage2 = EpNa2
         Next
 
+
+
     End Sub
 
     Public Sub CalculTHS()
@@ -940,13 +942,20 @@ Module Meteo
         Dim Canc As Boolean = False
 
         ReadMeteoFile(outfile, PostFile, txtfile, Canc)
+
         If Canc = True Then End
+
+        ' Écrire les données dans un fichier texte
+
+
 
         Troubleshoot()
 
         InputDeicingSalt()
 
         CalculTHS()
+
+
 
         If Export = "File" Then
             WriteExpoFile(outfile, PostFile, txtfile, Canc)
@@ -1048,6 +1057,9 @@ Module Meteo
         frmTempSeuil.ButtonExportDB.Show()
         frmTempSeuil.LabelOR.Show()
 
+        Dim textFilePath As String = "C:\Users\flori\Documents\Cours\A3\SAE\out\meteo_output.txt"
+        WriteMeteoToTextFile(textFilePath)
+
     End Sub
 
     Private Sub CalNeige()
@@ -1106,6 +1118,8 @@ Module Meteo
             Next i
         End If
     End Sub
+
+
 
     Private Sub AttenBruit(ByRef A As Single, ByRef B As Single, ByRef C As Single, ByRef D As Single, ByRef tempInput() As Single, ByRef tempOutput() As Single, ByRef tlim As Single)
         Dim dT1 As Single
@@ -1168,6 +1182,59 @@ Module Meteo
         Next
 
     End Sub
+
+    Public Sub WriteMeteoToTextFile(ByRef outFilePath As String)
+        ' Ouvrir le fichier texte en mode écriture
+        Dim nFic As Integer = FreeFile()
+        FileOpen(nFic, outFilePath, OpenMode.Output)
+
+        ' Écrire l'en-tête du fichier
+        PrintLine(nFic, frmTempSeuil.Label12.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown6.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown5.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown3.Value)
+
+        PrintLine(nFic, frmTempSeuil.Label3.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown1.Value)
+        PrintLine(nFic, frmTempSeuil.Label6.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown2.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown4.Value)
+        PrintLine(nFic, frmTempSeuil.Label22.Text)
+
+        PrintLine(nFic, frmTempSeuil.Label74.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown24.Value)
+        PrintLine(nFic, frmTempSeuil.Label76.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown25.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown23.Value)
+        PrintLine(nFic, frmTempSeuil.Label66.Text)
+
+        PrintLine(nFic, frmTempSeuil.NumericUpDown8.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown7.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown9.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown10.Value)
+        PrintLine(nFic, frmTempSeuil.TextBox1.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown13.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown14.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown11.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown12.Value)
+        PrintLine(nFic, frmTempSeuil.TextBox2.Text)
+
+        PrintLine(nFic, frmTempSeuil.NumericUpDown21.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown22.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown19.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown20.Value)
+        PrintLine(nFic, frmTempSeuil.TextBox4.Text)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown17.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown18.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown15.Value)
+        PrintLine(nFic, frmTempSeuil.NumericUpDown16.Value)
+        PrintLine(nFic, frmTempSeuil.TextBox3.Text)
+
+
+        ' Fermer le fichier
+        FileClose(nFic)
+    End Sub
+
 
 End Module
 
